@@ -8,4 +8,5 @@ Equations minimum_separation(i,j), energy_definition;
 minimum_separation(i,j)$(ord(j)>ord(i)).. power(x(i) - x(j), 2) + power(y(i) - y(j), 2) + power(z(i) - z(j), 2) =g= 0.6144835321;
 energy_definition.. cluster_energy =e= sum(i, sum(j$(ord(j)>ord(i)), exp(10*(1 - sqrt(power(x(i) - x(j), 2) + power(y(i) - y(j), 2) + power(z(i) - z(j), 2)))) * (exp(10*(1 - sqrt(power(x(i) - x(j), 2) + power(y(i) - y(j), 2) + power(z(i) - z(j), 2)))) - 2)));
 Model m / all /;
+m.optfile = 1;
 Solve m using nlp minimizing cluster_energy;

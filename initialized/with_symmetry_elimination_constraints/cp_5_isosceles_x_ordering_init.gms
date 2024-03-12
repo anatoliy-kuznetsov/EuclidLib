@@ -16,4 +16,5 @@ x.l('4') = 0.38230475; y.l('4') = 0.41979975;
 x.l('5') = 0.66217125; y.l('5') = 0.13993325;
 radius.l = 0.13993325;
 Model m / all /;
+m.optfile = 1;
 Solve m using nlp maximizing radius;

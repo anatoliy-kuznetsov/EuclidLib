@@ -8,5 +8,6 @@ Equations non_overlap(i,j), tangency(i);
 non_overlap(i,j)$(ord(j)>ord(i)).. sum(d, power(x(i,d) - x(j,d), 2)) =g= squared_minimum_separation;
 tangency(i).. sum(d, power(x(i,d), 2)) =e= 4;
 Model m / all /;
+m.optfile = 1;
 m.cutoff=4;
 Solve m using nlp maximizing squared_minimum_separation;
