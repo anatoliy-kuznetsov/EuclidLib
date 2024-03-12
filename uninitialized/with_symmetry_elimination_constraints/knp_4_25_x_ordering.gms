@@ -1,0 +1,15 @@
+Set i hyperspheres / 1*25 /;
+Set d dimension / 1*4 /;
+Alias(i,j);
+Variables x(i,d), squared_minimum_separation;
+x.lo(i,d) = -2; x.up(i,d) = 2;
+squared_minimum_separation.up = 4;
+x.fx('1', '1') = -2;
+x.fx('1', d)$(ord(d) > 1) = 0;
+Equations non_overlap(i,j), x_order(i), tangency(i);
+non_overlap(i,j)$(ord(j)>ord(i)).. sum(d, power(x(i,d) - x(j,d), 2)) =g= squared_minimum_separation;
+x_order(i)$(ord(i)<card(i)).. x(i,'1') =l= x(i+1,'1');
+tangency(i).. sum(d, power(x(i,d), 2)) =e= 4;
+Model m / all /;
+m.cutoff=4;
+Solve m using nlp maximizing squared_minimum_separation;
