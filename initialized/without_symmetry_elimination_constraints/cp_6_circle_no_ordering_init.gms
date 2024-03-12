@@ -1,0 +1,17 @@
+Set i circles / 1*6 /;
+Alias(i,j);
+Variables x(i), y(i), radius;
+x.lo(i) = -1; x.up(i) = 1;
+y.lo(i) = -1; y.up(i) = 1;
+Equations non_overlap(i,j), boundary(i);
+boundary(i).. power(x(i), 2) + power(y(i), 2) =l= power(1 - radius, 2);
+non_overlap(i,j)$(ord(j)>ord(i)).. power(x(i) - x(j), 2) + power(y(i) - y(j), 2) =g= power(2 * radius, 2);
+x.l('1') = -0.66666667; y.l('1') = 0.00000000;
+x.l('2') = -0.33333333; y.l('2') = -0.57735027;
+x.l('3') = -0.33333333; y.l('3') = 0.57735027;
+x.l('4') = 0.33333333; y.l('4') = -0.57735027;
+x.l('5') = 0.33333333; y.l('5') = 0.57735027;
+x.l('6') = 0.66666667; y.l('6') = 0.00000000;
+radius.l = 0.33333333;
+Model m / all /;
+Solve m using nlp maximizing radius;

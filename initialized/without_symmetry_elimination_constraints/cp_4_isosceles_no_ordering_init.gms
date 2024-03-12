@@ -1,0 +1,17 @@
+Set i circles / 1*4 /;
+Alias(i,j);
+Variables x(i), y(i), radius;
+x.lo(i) = 0; x.up(i) = 1;
+y.lo(i) = 0; y.up(i) = 1;
+Equations non_overlap(i,j), boundary1(i), boundary2(i), boundary3(i);
+boundary1(i).. x(i) =g= radius;
+boundary2(i).. y(i) =g= radius;
+boundary3(i).. (1 - x(i) - y(i)) / sqrt(2) =g= radius;
+non_overlap(i,j)$(ord(j)>ord(i)).. power(x(i) - x(j), 2) + power(y(i) - y(j), 2) =g= power(2 * radius, 2);
+x.l('1') = 0.16018862; y.l('1') = 0.16018862;
+x.l('2') = 0.16018862; y.l('2') = 0.61327046;
+x.l('3') = 0.38672954; y.l('3') = 0.38672954;
+x.l('4') = 0.61327046; y.l('4') = 0.16018862;
+radius.l = 0.16018862;
+Model m / all /;
+Solve m using nlp maximizing radius;

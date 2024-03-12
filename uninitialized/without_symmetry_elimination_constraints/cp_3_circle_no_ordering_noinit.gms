@@ -1,0 +1,10 @@
+Set i circles / 1*3 /;
+Alias(i,j);
+Variables x(i), y(i), radius;
+x.lo(i) = -1; x.up(i) = 1;
+y.lo(i) = -1; y.up(i) = 1;
+Equations non_overlap(i,j), boundary(i);
+boundary(i).. power(x(i), 2) + power(y(i), 2) =l= power(1 - radius, 2);
+non_overlap(i,j)$(ord(j)>ord(i)).. power(x(i) - x(j), 2) + power(y(i) - y(j), 2) =g= power(2 * radius, 2);
+Model m / all /;
+Solve m using nlp maximizing radius;

@@ -1,0 +1,15 @@
+Set i circles / 1*3 /;
+Alias(i,j);
+Variables x(i), y(i), radius;
+x.lo(i) = -1; x.up(i) = 1;
+y.lo(i) = -1; y.up(i) = 1;
+Equations non_overlap(i,j), x_order(i), boundary(i);
+boundary(i).. power(x(i), 2) + power(y(i), 2) =l= power(1 - radius, 2);
+x_order(i)$(ord(i)<card(i)).. x(i) =l= x(i+1);
+non_overlap(i,j)$(ord(j)>ord(i)).. power(x(i) - x(j), 2) + power(y(i) - y(j), 2) =g= power(2 * radius, 2);
+x.l('1') = -0.46410162; y.l('1') = -0.26794919;
+x.l('2') = 0.00000000; y.l('2') = 0.53589838;
+x.l('3') = 0.46410162; y.l('3') = -0.26794919;
+radius.l = 0.46410162;
+Model m / all /;
+Solve m using nlp maximizing radius;
