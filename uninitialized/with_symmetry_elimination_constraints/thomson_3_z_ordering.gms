@@ -10,5 +10,4 @@ sphere_surface(i).. power(x(i), 2) + power(y(i), 2) + power(z(i), 2) =e= 1;
 energy_definition.. total_energy =e= sum(i, sum(j$(ord(j)>ord(i)), 1/sqrt(power(x(i) - x(j), 2) + power(y(i) - y(j), 2) + power(z(i) - z(j), 2))));
 z_order(i)$(ord(i)<card(i)).. z(i) =g= z(i + 1);
 Model m / all /;
-m.optfile = 1;
 Solve m using nlp minimizing total_energy;

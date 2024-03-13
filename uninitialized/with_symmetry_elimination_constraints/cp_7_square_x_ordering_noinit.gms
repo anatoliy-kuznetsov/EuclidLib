@@ -11,5 +11,4 @@ boundary4(i).. y(i) - radius =g= -0.5;
 x_order(i)$(ord(i)<card(i)).. x(i) =l= x(i+1);
 non_overlap(i,j)$(ord(j)>ord(i)).. power(x(i) - x(j), 2) + power(y(i) - y(j), 2) =g= power(2 * radius, 2);
 Model m / all /;
-m.optfile = 1;
 Solve m using nlp maximizing radius;
