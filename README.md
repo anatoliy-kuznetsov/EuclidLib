@@ -13,8 +13,8 @@ There are currently six types of problems represented in EuclidLib:
 * The circle packing problem[^4]
 * The kissing number problem[^5]
 
-[^1] The Cambridge Cluster Database, D. J. Wales, J. P. K. Doye, A. Dullweber, M. P. Hodges, F. Y. Naumkin F. Calvo, J. Hernández-Rojas and T. F. Middleton, URL [http://www-wales.ch.cam.ac.uk/CCD.html](http://www-wales.ch.cam.ac.uk/CCD.html)
-[^2] "Thomson problem", Wikipedia, URL [https://en.wikipedia.org/wiki/Thomson_problem](https://en.wikipedia.org/wiki/Thomson_problem)
-[^3] Z. Drezner, P. Kalczynski, and S. Salhi. The planar multiple obnoxious facilities location problem: A Voronoi based heuristic. *Omega* **87**, 105-116 (2019).
-[^4] E. Specht. Packomania, URL [http://packomania.com/](http://packomania.com/)
-[^5] S. Kucherenko, P. Belotti, L. Liberti, and N. Maculan. New formulations for the Kissing number problem. *Discrete Applied Mathematics* **155**(14), 1837-1841 (2007).
+[^1]: The Cambridge Cluster Database, D. J. Wales, J. P. K. Doye, A. Dullweber, M. P. Hodges, F. Y. Naumkin F. Calvo, J. Hernández-Rojas and T. F. Middleton, URL [http://www-wales.ch.cam.ac.uk/CCD.html](http://www-wales.ch.cam.ac.uk/CCD.html)
+[^2]: "Thomson problem", Wikipedia, URL [https://en.wikipedia.org/wiki/Thomson_problem](https://en.wikipedia.org/wiki/Thomson_problem)
+[^3]: Z. Drezner, P. Kalczynski, and S. Salhi. The planar multiple obnoxious facilities location problem: A Voronoi based heuristic. *Omega* **87**, 105-116 (2019).
+[^4]: E. Specht. Packomania, URL [http://packomania.com/](http://packomania.com/)
+[^5]: S. Kucherenko, P. Belotti, L. Liberti, and N. Maculan. New formulations for the Kissing number problem. *Discrete Applied Mathematics* **155**(14), 1837-1841 (2007).
