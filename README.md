@@ -2,7 +2,7 @@
 
 This repository hosts EuclidLib, a collection of nonconvex optimization problem instances involving the Euclidean norm from various applications across mathematics, science, and engineering.
 These problems are known to be particularly challenging for deterministic global optimization solvers due to their inherent symmetries as well as the presence of reverse convex constraints involving the Euclidean norm.
-The purpose of EuclidLib is to provide a benchmark to assist in solver development.
+The purpose of EuclidLib is to provide a benchmark to assist in algorithm development.
 Instances are provided in GAMS, JuMP, and Pyomo formats.
 
 There are currently six types of problems represented in EuclidLib: 
