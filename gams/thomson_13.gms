@@ -1,0 +1,11 @@
+Set i electrons / 1*13 /;
+Alias(i,j);
+Variables x(i), y(i), z(i), total_energy;
+x.lo(i) = -1; x.up(i) = 1;
+y.lo(i) = -1; y.up(i) = 1;
+z.lo(i) = -1; z.up(i) = 1;
+Equations sphere_surface(i), energy_definition;
+sphere_surface(i).. power(x(i), 2) + power(y(i), 2) + power(z(i), 2) =e= 1;
+energy_definition.. total_energy =e= sum(i, sum(j$(ord(j)>ord(i)), 1/sqrt(power(x(i) - x(j), 2) + power(y(i) - y(j), 2) + power(z(i) - z(j), 2))));
+Model m / all /;
+Solve m using nlp minimizing total_energy;

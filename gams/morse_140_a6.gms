@@ -1,0 +1,11 @@
+Set i atoms / 1*140 /;
+Alias(i,j);
+Variables x(i), y(i), z(i), cluster_energy;
+x.lo(i) = 0; x.up(i) = 139;
+y.lo(i) = -139; y.up(i) = 139;
+z.lo(i) = -139; z.up(i) = 139;
+Equations minimum_separation(i,j), energy_definition;
+minimum_separation(i,j)$(ord(j)>ord(i)).. power(x(i) - x(j), 2) + power(y(i) - y(j), 2) + power(z(i) - z(j), 2) =g= 0.32159900740899994;
+energy_definition.. cluster_energy =e= sum(i, sum(j$(ord(j)>ord(i)), exp(6*(1 - sqrt(power(x(i) - x(j), 2) + power(y(i) - y(j), 2) + power(z(i) - z(j), 2)))) * (exp(6*(1 - sqrt(power(x(i) - x(j), 2) + power(y(i) - y(j), 2) + power(z(i) - z(j), 2)))) - 2)));
+Model m / all /;
+Solve m using nlp minimizing cluster_energy;

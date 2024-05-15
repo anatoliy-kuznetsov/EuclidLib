@@ -1,0 +1,14 @@
+Set i circles / 1*16 /;
+Alias(i,j);
+Variables x(i), y(i), radius(i), shared_radius_factor;
+x.lo(i) = -0.5; x.up(i) = 0.5;
+y.lo(i) = -0.5; y.up(i) = 0.5;
+Equations non_overlap(i,j), radius_definition(i), boundary1(i), boundary2(i), boundary3(i), boundary4(i);
+boundary1(i).. x(i) + radius(i) =l= 0.5;
+boundary2(i).. x(i) - radius(i) =g= -0.5;
+boundary3(i).. y(i) + radius(i) =l= 0.5;
+boundary4(i).. y(i) - radius(i) =g= -0.5;
+non_overlap(i,j)$(ord(j)>ord(i)).. power(x(i) - x(j), 2) + power(y(i) - y(j), 2) =g= power(radius(i) + radius(j), 2);
+radius_definition(i).. radius(i) =e= shared_radius_factor * (ord(i) ** (0));
+Model m / all /;
+Solve m using nlp maximizing shared_radius_factor;

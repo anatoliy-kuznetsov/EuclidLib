@@ -1,0 +1,11 @@
+Set i hyperspheres / 1*79 /;
+Set d dimension / 1*6 /;
+Alias(i,j);
+Variables x(i,d), squared_minimum_separation;
+x.lo(i,d) = -2; x.up(i,d) = 2;
+squared_minimum_separation.up = 4;
+Equations non_overlap(i,j), tangency(i);
+non_overlap(i,j)$(ord(j)>ord(i)).. sum(d, power(x(i,d) - x(j,d), 2)) =g= squared_minimum_separation;
+tangency(i).. sum(d, power(x(i,d), 2)) =e= 4;
+Model m / all /;
+Solve m using nlp maximizing squared_minimum_separation;

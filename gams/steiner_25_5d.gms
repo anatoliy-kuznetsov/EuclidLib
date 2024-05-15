@@ -1,0 +1,45 @@
+Sets
+i Steiner points / 1*23 /
+j terminals / 1*25 /
+k dimensions / 1*5 /;
+Alias(i,ii);
+Parameters terminals(j,k);
+terminals('1', '1') = 0.9000582191556544; terminals('1', '2') = 0.22253228596173347; terminals('1', '3') = 0.8080467253823205; terminals('1', '4') = 0.3009407488048058; terminals('1', '5') = 0.7371803386610298; 
+terminals('2', '1') = 0.35106846057466856; terminals('2', '2') = 0.6075082146080484; terminals('2', '3') = 0.6149717541921728; terminals('2', '4') = 0.004260331953746643; terminals('2', '5') = 0.7087604227640443; 
+terminals('3', '1') = 0.15477215848516857; terminals('3', '2') = 0.5044142653700144; terminals('3', '3') = 0.8273045600713594; terminals('3', '4') = 0.635752581805976; terminals('3', '5') = 0.7514254917019157; 
+terminals('4', '1') = 0.2936030712553235; terminals('4', '2') = 0.4899078525579864; terminals('4', '3') = 0.18680818279957356; terminals('4', '4') = 0.49036166767616207; terminals('4', '5') = 0.14355859833495477; 
+terminals('5', '1') = 0.9252796549312403; terminals('5', '2') = 0.27778995564148934; terminals('5', '3') = 0.6060766177818138; terminals('5', '4') = 0.5345676232118267; terminals('5', '5') = 0.42915146818618877; 
+terminals('6', '1') = 0.8922872587322414; terminals('6', '2') = 0.6398388721888588; terminals('6', '3') = 0.769339283524581; terminals('6', '4') = 0.17819328496872444; terminals('6', '5') = 0.16112670349415448; 
+terminals('7', '1') = 0.055983136807495226; terminals('7', '2') = 0.7847393447014687; terminals('7', '3') = 0.5937138630884762; terminals('7', '4') = 0.08651825321133277; terminals('7', '5') = 0.4648927869962536; 
+terminals('8', '1') = 0.5217176454865271; terminals('8', '2') = 0.4820853113893072; terminals('8', '3') = 0.623848483838943; terminals('8', '4') = 0.9709053018979557; terminals('8', '5') = 0.37241326695069166; 
+terminals('9', '1') = 0.6424439059385806; terminals('9', '2') = 0.7647578063177848; terminals('9', '3') = 0.8338591904039329; terminals('9', '4') = 0.426626494568606; terminals('9', '5') = 0.540966885110712; 
+terminals('10', '1') = 0.7346679369518954; terminals('10', '2') = 0.6554072386728492; terminals('10', '3') = 0.7672714066907567; terminals('10', '4') = 0.5672877055785992; terminals('10', '5') = 0.23528341506082961; 
+terminals('11', '1') = 0.6038626184758663; terminals('11', '2') = 0.5115806406169581; terminals('11', '3') = 0.6937248842653473; terminals('11', '4') = 0.45727664627071085; terminals('11', '5') = 0.5725469949931367; 
+terminals('12', '1') = 0.7452480022921251; terminals('12', '2') = 0.3005202302863864; terminals('12', '3') = 0.3696539630878388; terminals('12', '4') = 0.10029038077036256; terminals('12', '5') = 0.4241119270118566; 
+terminals('13', '1') = 0.1854357902368564; terminals('13', '2') = 0.6148112106886975; terminals('13', '3') = 0.17917463519172183; terminals('13', '4') = 0.345419366932208; terminals('13', '5') = 0.4211265159133927; 
+terminals('14', '1') = 0.9367285497013037; terminals('14', '2') = 0.29153253221794373; terminals('14', '3') = 0.5089567694616417; terminals('14', '4') = 0.5943343815259663; terminals('14', '5') = 0.6835218468203478; 
+terminals('15', '1') = 0.9340428404914063; terminals('15', '2') = 0.5861655427859326; terminals('15', '3') = 0.022799790817675913; terminals('15', '4') = 0.23842419354062883; terminals('15', '5') = 0.17536831044305035; 
+terminals('16', '1') = 0.7387604848230894; terminals('16', '2') = 0.957807139143621; terminals('16', '3') = 0.4662656231654252; terminals('16', '4') = 0.5706834658451853; terminals('16', '5') = 0.2694285315664; 
+terminals('17', '1') = 0.6875997503442842; terminals('17', '2') = 0.25331076854943546; terminals('17', '3') = 0.6595004315336354; terminals('17', '4') = 0.32209732214759856; terminals('17', '5') = 0.6026130054462642; 
+terminals('18', '1') = 0.9103719101140197; terminals('18', '2') = 0.9395027284955005; terminals('18', '3') = 0.7448403344239763; terminals('18', '4') = 0.2142059621573974; terminals('18', '5') = 0.5752023548356016; 
+terminals('19', '1') = 0.45454832512081134; terminals('19', '2') = 0.527004193748138; terminals('19', '3') = 0.80002905627334; terminals('19', '4') = 0.985309201039105; terminals('19', '5') = 0.2410699648052247; 
+terminals('20', '1') = 0.52565917406946; terminals('20', '2') = 0.9764631651672818; terminals('20', '3') = 0.47921791233580713; terminals('20', '4') = 0.46038057490830375; terminals('20', '5') = 0.16677843488612476; 
+terminals('21', '1') = 0.07298937074704781; terminals('21', '2') = 0.6025488626087718; terminals('21', '3') = 0.22682012673645324; terminals('21', '4') = 0.7611623435744997; terminals('21', '5') = 0.7911488426170376; 
+terminals('22', '1') = 0.4615605804875945; terminals('22', '2') = 0.15821315373199896; terminals('22', '3') = 0.8911956442775778; terminals('22', '4') = 0.48781267842523657; terminals('22', '5') = 0.5270600200495504; 
+terminals('23', '1') = 0.35069941385410963; terminals('23', '2') = 0.42060089055796; terminals('23', '3') = 0.5223692064624179; terminals('23', '4') = 0.7755660646222067; terminals('23', '5') = 0.4114860728475871; 
+terminals('24', '1') = 0.5601925552195862; terminals('24', '2') = 0.8846132828632506; terminals('24', '3') = 0.02024606308332977; terminals('24', '4') = 0.14442857869746584; terminals('24', '5') = 0.975891990730959; 
+terminals('25', '1') = 0.32676186763605175; terminals('25', '2') = 0.19182404889857063; terminals('25', '3') = 0.9167910408413891; terminals('25', '4') = 0.9400985513775411; terminals('25', '5') = 0.050514281529855154; 
+Parameter bigM / 2.23606797749979 /;
+Positive Variables distance_Steiner_Steiner(i,ii), distance_Steiner_terminal(i,j), Steiner_points(i,k);
+Steiner_points.up(i,k) = 1; distance_Steiner_Steiner.up(i,ii) = bigM; distance_Steiner_terminal.up(i,j) = bigM;
+Binary Variables is_connected_Steiner_Steiner(i,ii), is_connected_Steiner_terminal(i,j);
+Variable objective;
+Equations objective_definition, distance_Steiner_Steiner_def(i,ii), distance_Steiner_terminal_def(i,j), assignment(j), cardinality(i), Steiner_connectivity(i);
+objective_definition.. objective =e= sum(i, sum(ii$(ord(i)<ord(ii)), distance_Steiner_Steiner(i,ii)) + sum(j, distance_Steiner_terminal(i,j)));
+distance_Steiner_Steiner_def(i,ii)$(ord(i)<ord(ii)).. distance_Steiner_Steiner(i,ii) =g= sqrt(sum(k, power(Steiner_points(i,k) - Steiner_points(ii,k), 2))) - bigM * (1 - is_connected_Steiner_Steiner(i,ii));
+distance_Steiner_terminal_def(i,j).. distance_Steiner_terminal(i,j) =g= sqrt(sum(k, power(Steiner_points(i,k) - terminals(j,k), 2))) - bigM * (1 - is_connected_Steiner_terminal(i,j));
+assignment(j).. sum(i, is_connected_Steiner_terminal(i,j)) =e= 1;
+cardinality(i).. sum(j, is_connected_Steiner_terminal(i,j)) + sum(ii$(ord(ii)<ord(i)), is_connected_Steiner_Steiner(ii,i)) + sum(ii$(ord(i)<ord(ii)), is_connected_Steiner_Steiner(i,ii)) =e= 3;
+Steiner_connectivity(i)$(ord(i)>1).. sum(ii$(ord(ii)<ord(i)), is_connected_Steiner_Steiner(ii,i)) =e= 1;
+Model m / all /;
+Solve m using minlp minimizing objective;

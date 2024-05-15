@@ -1,0 +1,11 @@
+Set i electrons / 1*110 /;
+Alias(i,j);
+Variables x(i), y(i), z(i), minimum_separation;
+x.lo(i) = -1; x.up(i) = 1;
+y.lo(i) = -1; y.up(i) = 1;
+z.lo(i) = -1; z.up(i) = 1;
+Equations sphere_surface(i), objective_definition(i,j);
+sphere_surface(i).. power(x(i), 2) + power(y(i), 2) + power(z(i), 2) =e= 1;
+objective_definition(i,j)$(ord(i)<ord(j)).. minimum_separation =l= sqrt(power(x(i) - x(j), 2) + power(y(i) - y(j), 2) + power(z(i) - z(j), 2));
+Model m / all /;
+Solve m using nlp maximizing minimum_separation;
